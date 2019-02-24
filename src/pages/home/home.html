@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color='#9DF5F5'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1" style="background-color:#CDD4DA;">
+  <img src="assets/img/Map.png" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+  <ion-card style="border-radius:10px 10px 10px 10px;">
+
+
+
+    <ion-item>
+      <h1 style="color:white;">Nearest Station</h1>
+      <p style="color:white;">18 min (2.6 mi)</p>
+    </ion-item>
+
+
+    <ion-item>
+
+      <button ion-button icon-start clear item-end>
+        <ion-icon name="navigate"></ion-icon>
+        Start
+      </button>
+    </ion-item>
+
+  </ion-card>
+  <button id="home-button1" ion-button color="light" block on-click="goToRent()">
+    Rent
+  </button>
+
+
+
+  <!-- <ion-list>
+    <ion-item *ngFor="let item of users; let i = index">
+      {{item.ref}}
+    </ion-item>
+  </ion-list> -->
+
+
+</ion-content>

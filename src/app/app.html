@@ -1,0 +1,52 @@
+<ion-menu [content]="mainContent">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title style="text-align:center;">
+        <img src="assets/img/logo.png" width="100px">
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content id="side-menu21" class="myBg">
+
+    <div class="profile">
+      <div class="profile-image">
+        <img menuClose="" on-click="goToAccount()" src="https://alternative.me/icons/meowchat.png" />
+        <ion-list-header *ngIf="auth.getEmail()">{{auth.getEmail()}}</ion-list-header>
+      </div>
+    </div>
+    <ion-list id="menu-list1" no-lines>
+
+      <ion-item color="none" menuClose="" on-click="goToHome()" id="menu-list-item1">
+        <ion-icon name="md-home" item-left></ion-icon>
+        Home
+      </ion-item>
+      <!-- <ion-item color="none" menuClose="" on-click="goToLogin()" id="menu-list-item4">
+        <ion-icon name="md-unlock"></ion-icon>
+        Login
+      </ion-item> -->
+
+
+
+      <ion-item (click)="logout()" *ngIf="auth.authenticated">
+        <ion-icon name="log-out" item-left></ion-icon>
+        Log out
+      </ion-item>
+
+      <ion-item (click)="login()" *ngIf="!auth.authenticated">
+        <ion-icon name="log-in" item-left></ion-icon>
+        Log in
+      </ion-item>
+
+      <!--     <ion-item color="none" menuClose="" on-click="goToCart()" id="menu-list-item2">
+        <ion-icon name="md-cart"></ion-icon>
+        Cart
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToCloud()" id="menu-list-item3">
+        <ion-icon name="md-cloud"></ion-icon>
+        Cloud
+      </ion-item> -->
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>

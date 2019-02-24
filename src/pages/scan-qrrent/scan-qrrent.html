@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons start>
+      <button ion-button icon-left solid>
+        <ion-icon name="arrow-round-back"></ion-icon>
+        Back
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Scan-QR-Rent
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page8">
+  <div>
+    <ion-input style="background-color: gray" type="text" [(ngModel)]="encodeTExt"></ion-input>
+    <button ion-button block (click)="encode()">Encode</button>
+  </div>
+  <div>
+    <button ion-button block (click)="scan()">Scan</button>
+  </div>
+  <div *ngIf="scannedData.text">
+    <label>Your barcode is </label>
+    <br>
+    <span>{{scannedData.text}}</span>
+
+    <label>{{outputifexist.text}}</label>
+  </div>
+
+</ion-content>

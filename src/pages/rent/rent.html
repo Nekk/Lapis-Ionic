@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Rent
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page6">
+
+  <p>{{result}}</p>
+
+
+  <div id="rent-container4" id="wrapper">
+
+    <!--   <button id="rent-button6" ion-button color="positive" icon-right style="font-size:18px;border-radius:30px 30px 30px 30px;"
+      on-click="startTimer()">
+      Rent
+      <ion-icon name="battery-charging"></ion-icon>
+    </button>
+    <button id="rent-button5" ion-button color="danger" icon-right style="font-size:18px;border-radius:30px 30px 30px 30px;"
+      on-click="stop()">
+      Return
+      <ion-icon name="return-left"></ion-icon>
+    </button> -->
+
+
+    <button id="rent-button6" ion-button icon-right style="font-size:18px;border-radius:30px 30px 30px 30px;" (click)="scanrent()">Rent
+      <ion-icon name="battery-charging"></ion-icon>
+    </button>
+
+    <button id="rent-button5" color="danger" ion-button icon-right style="font-size:18px;border-radius:30px 30px 30px 30px;"
+      (click)="scanstop()">Return
+      <ion-icon name="return-left"></ion-icon>
+    </button>
+    <!-- <button id="Qr-Button1" ion-button color="light" block on-click="goToScanQRReturn()">
+      <ion-icon name="md-timer"></ion-icon>
+      QR
+    </button> -->
+  </div>
+
+
+  <div id="wrapper" *ngIf="scannedData.text">
+    <label>Your barcode is </label>
+    <br>
+    <a href={{scannedData.text}}> {{scannedData.text}}</a>
+    <br>
+
+  </div>
+
+
+
+  <!-- <div id="rent-container4" class="container rows">
+
+       <button id="rent-button6" ion-button color="positive" icon-right style="font-size:18px;border-radius:30px 30px 30px 30px;"
+      on-click="goToScanQRRent()">
+      Rent
+      <ion-icon name="battery-charging"></ion-icon>
+    </button>
+    <button id="rent-button5" ion-button color="danger" icon-right style="font-size:18px;border-radius:30px 30px 30px 30px;"
+      on-click="goToScanQRReturn()">
+      Return
+      <ion-icon name="return-left"></ion-icon>
+    </button> 
+
+  </div> //-->
+
+</ion-content>

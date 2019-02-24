@@ -1,0 +1,39 @@
+.profile {
+    position: relative;
+    height: 250px;
+  }
+  
+  .profile-image{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .profile-image img {
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+  
+  }
+  
+  .profile-image p {
+    text-align: center;
+    // font-size: 1.5em!important;
+    color: rgb(0, 0, 0);
+  }
+  
+  .myBg{
+      background-color:#FFF!important;
+    }
+  
+    ion-item{
+      background-color:#FFF!important;
+    }
+    ion-toolbar {
+      background-color:#9DF5F5!important;
+    }
+
+
+  
